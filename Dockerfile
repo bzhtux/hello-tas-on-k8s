@@ -11,7 +11,7 @@ RUN go get . && go build -o demo
 # final image
 FROM alpine
 
-ENV APP_PORT=8080
+ENV PORT=8080
 
 WORKDIR /app
 COPY --from=build-env /go/src/github.com/bzhtux/hello-tas-on-k8s/demo /app/
