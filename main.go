@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	appPort := os.Getenv("APP_PORT")
+	appPort := os.Getenv("PORT")
 	e := echo.New()
 	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Hello TAS on Kubernetes")
